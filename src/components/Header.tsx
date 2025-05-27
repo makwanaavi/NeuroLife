@@ -7,7 +7,7 @@ import DarkMode from "./DarkMode";
 const Header = () => {
   const user = "Avi";
   return (
-    <header className="relative flex h-24 w-full items-center justify-between bg-gradient-to-r from-red-100 via-red-50 to-white px-3 sm:px-8 shadow-md rounded-b-2xl">
+    <header className="relative flex h-24 w-full items-center justify-between bg-white px-3 sm:px-8 shadow-md rounded-b-2xl">
       <div className="flex items-center gap-4">
         <SidebarTrigger className="text-red-600" />
         <Link
