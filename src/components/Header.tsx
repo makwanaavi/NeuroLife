@@ -2,9 +2,10 @@ import Link from "next/link";
 import { SidebarTrigger } from "./ui/sidebar";
 import LogoutButton from "./LogoutButton";
 import { Button } from "./ui/button";
+import DarkMode from "./DarkMode";
 
 const Header = () => {
-  const user = "Avi"; 
+  const user = "Avi";
   return (
     <header className="relative flex h-24 w-full items-center justify-between bg-gradient-to-r from-red-100 via-red-50 to-white px-3 sm:px-8 shadow-md rounded-b-2xl">
       <div className="flex items-center gap-4">
@@ -20,17 +21,24 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex gap-4">
-        {user ? <LogoutButton /> : 
-        <>
-         <Button asChild>
-            <Link href={"/signup"} className="hiddle sm:block">SignUp</Link>
-          </Button>
+        {user ? (
+          <LogoutButton />
+        ) : (
+          <>
+            <Button asChild>
+              <Link href={"/signup"} className="hiddle sm:block">
+                SignUp
+              </Link>
+            </Button>
 
             <Button asChild>
-            <Link href={"/login"} className="hiddle sm:block">Login</Link>
-          </Button>
-        </>
-}
+              <Link href={"/login"} className="hiddle sm:block">
+                Login
+              </Link>
+            </Button>
+          </>
+        )}
+        <DarkMode/>
       </div>
     </header>
   );
